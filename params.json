@@ -1,0 +1,7 @@
+{
+    "name": "Wenchy.github.io",
+    "tagline": "Stay Foolish, Stay Hungry and Achieve the Fulture.",
+    "body": "wenchy.github.io\r\n================\r\n\r\nStay Foolish, Stay Hungry, and Achieve the Fulture.\r\n\r\n##后台服务器开发环境 v0.11\r\n\r\n### 1. 服务器基本配置\r\n- PHP5.4+\r\n- mysql5.5+\r\n- apache2 (mod_rewrire)\r\n\r\n### 2. 后台开发环境\r\n- laravel4.2 (web framework)，请参考laravel的官方文档说明。需要的第三方包都在项目根目录的配置文件config.json里说明了，主要有如下几个：\r\n  1. \"cartalyst/sentry\": \"2.1.*\",\r\n  2. \"mews/captcha\": \"dev-master\",\r\n  3. \"guzzlehttp/guzzle\": \"~4.0\",\r\n  4. \"\"liebig/cron\": \"dev-master\",\r\n  5. \"barryvdh/laravel-debugbar\": \"1.8.*@dev\"\r\n- composer v1.0，PHP包管理器。\r\n- 后台web页面使用的第三方插件和库有\r\n  1. bootstrap v3.3.2\r\n  2. Datepicker for Bootstrap\r\n  3. artDialog v6.0.5\r\n  4. ECharts (Enterprise Charts 商业产品图表库)\r\n  5. jQuery v1.11\r\n  6. jQuery File Upload Plugin\r\n  7. jquery.layout v1.3.0\r\n  8. jQuery edit in place plugin  v2.3.0\r\n  9. jQuery Form Plugin v3.51.0\r\n  10. UEditor v2.2.1\r\n  11. JQuery zTree plugin  v3.5.17\r\n\r\n### 3. 后台定时任务Cron Job（消息推送）\r\n结合laravel第三方包`liebig/cron`，需要配合使用linux系统下的`crontab`来使用，首先在linux terminal里输入命令`sudo crontab -u www-data -e`进入cron编辑器，然后在文件末尾加入一行命令`* * * * * /usr/local/php/bin/php /var/www/gzcourt/artisan cron:run`, 执行的代码在**app/start/global.php**文件内。\r\n\r\n### 4. server -> app 消息推送\r\n- 个推\r\n\r\n### Feedback & Bug Report\r\n- 朱文周 Email: <wenchy.zwz@qq.com>\r\n\r\n",
+    "google": "",
+    "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
