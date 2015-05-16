@@ -4,7 +4,7 @@ import sys
 import codecs
 import re
 
-# encoding=utf8
+# encoding=utf-8
 reload(sys)
 sys.setdefaultencoding("utf-8")
 
