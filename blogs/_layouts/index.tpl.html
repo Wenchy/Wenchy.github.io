@@ -8,85 +8,13 @@
     <title>Wenchy's blog</title>
     <!-- CSS linked -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+   <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="stylesheets/index.css">
     <!-- JS inlcuded -->
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <!-- CSS source code -->
-    <style>
-    /* Sticky footer styles
-    -------------------------------------------------- */
-    
-    html {
-        position: relative;
-        min-height: 100%;
-    }
-    
-    body {
-        /* Margin bottom by footer height */
-        
-        margin-bottom: 60px;
-    }
-    
-    .blog-main {
-        font-family: "Times New Roman", Times, serif, Georgia;
-        color: #555;
-        font-size: 18px;
-        line-height: 1.5;
-    }
-    
-    .blog-side-module-inset {
-        padding: 15px;
-        background-color: #f5f5f5;
-        border-radius: 4px;
-    }
-    
-    .blog-side-module {
-        padding: 15px;
-    }
-    
-    .footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        /* Set the fixed height of the footer here */
-        
-        height: 60px;
-        /* background-color: #f5f5f5;*/
-    }
-    /* Custom page CSS
-    -------------------------------------------------- */
-    /* Not required for template or sticky footer method. */
-    
-    .page-header {
-        padding-bottom: 9px;
-        margin: 40px 0 20px;
-        border-bottom: 1px solid #eee;
-    }
-    /*
-     * Override Bootstrap's default container.
-     */
-    
-    @media (min-width: 1200px) {
-        .container {
-            width: 970px;
-        }
-    }
-    
-    body > .container {
-        padding: 60px 15px 0;
-    }
-    
-    .container .text-muted {
-        margin: 20px 0;
-    }
-    
-    .footer > .container {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-    </style>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -97,7 +25,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -122,7 +50,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 blog-main">
-                <h3 class="page-header">Recent Blogs</h3>
+                <h4 class="page-header">Blogs</h4>
                 <dl class="dl-horizontal">
                     {{ blog.list }}
                 </dl>
@@ -134,7 +62,8 @@
     </div>
     <footer class="footer">
         <div class="container">
-            <p class="text-muted">©AtomStudio 2015</p>
+            <hr>
+            <p class="text-muted">© AtomStudio 2015</p>
         </div>
     </footer>
 </body>
