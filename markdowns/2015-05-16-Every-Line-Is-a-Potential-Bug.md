@@ -1,6 +1,6 @@
 Every Line Is a Potential Bug
 =====================
-*2015-05-16*
+Wenchy *2015-05-16*
 
 > Original: [Every Line Is a Potential Bug](http://www.teamten.com/lawrence/writings/every_line_is_a_potential_bug.html)
 
@@ -33,6 +33,7 @@ There’s a small chance that the current time will have advanced by the time th
 > Update 3-15-2010: Ajit Mandalay pointed out another bad scenario: the subtraction yields 0, which means “infinity”, and the loop potentially never exits.
 
 Every line of code you write is a potential bug. Do not write any line of code unless you absolutely need it right now and your program will suffer for the lack of it. Do not write routines speculatively. Do not write abstraction layers you don’t need right now. If an optimization will add any complexity whatsoever, even a subtraction, resist it. You will be sorry in five years when your code is riddled with potentially-buggy code that you never really needed to write.
+
 
 
 
