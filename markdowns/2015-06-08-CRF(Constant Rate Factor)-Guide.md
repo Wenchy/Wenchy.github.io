@@ -9,11 +9,11 @@ CRF stands for Constant Rate Factor, x264’s best single-pass encoding method.
 ## Quick Summary: What is the Constant Rate Factor?
 The Constant Rate Factor (CRF) is the default quality setting for the x264 encoder. You can set the values between 0 and 51, where lower values would result in better quality (at the expense of higher file sizes). Sane values are between 18 and 28. The default for x264 is 23, so you can use this as a starting point.
 
-With 'ffmpeg', it'd look like this:
+With `ffmpeg`, it'd look like this:
 
-''' shell
+``` shell
 ffmpeg -i input.mp4 -c:v libx264 -crf 23 output.mp4
-'''
+```
 
 If you're unsure about what CRF to use, begin with 23 and change it according to your subjective impression of the output. Is the quality good enough? No? Then set a lower CRF. Is the file size too high? Choose a higher CRF. A change of ±6 should result in about half/double the file size, although your results might vary.
 
