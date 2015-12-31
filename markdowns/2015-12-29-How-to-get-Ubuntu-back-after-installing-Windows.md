@@ -35,46 +35,46 @@ Here's how:
 2. Determine the partition number of your main partition. GParted (which should already be installed, by default, on the live session) can help you here. I'm going to assume in this answer that it's `/dev/sda2`, but make sure you use the correct partition number for your system!
 3. Mount your partition: 
 
-``` shell
-sudo mount /dev/sda2 /mnt  #Replace sda2 with your partition number
-```
+    ``` shell
+    sudo mount /dev/sda2 /mnt  # Replace sda2 with your partition number
+    ```
 
 4. Bind mount some other necessary stuff:
 
-``` shell
-for i in /sys /proc /run /dev; do sudo mount --bind "$i" "/mnt$i"; done
-```
+    ``` shell
+    for i in /sys /proc /run /dev; do sudo mount --bind "$i" "/mnt$i"; done
+    ```
 
 5. `chroot` into your Ubuntu install:
 
-``` shell
-sudo chroot /mnt
-```
+    ``` shell
+    sudo chroot /mnt
+    ```
 
 6. At this point, you're in your install, not the live session, and running as root. Update grub:
 
-``` shell
-update-grub
-```
+    ``` shell
+    update-grub
+    ```
 
-If you get errors, go to step 7. (Otherwise, it is optional.)
+    If you get errors, go to step 7. (Otherwise, it is optional.)
 
 7. Depending on your situation, you might have to reinstall grub:
 
-``` shell
-grub-install /dev/sda
-update-grub # I'm not sure if this is necessary, but it doesn't hurt.
-```
+    ``` shell
+    grub-install /dev/sda
+    update-grub # I'm not sure if this is necessary, but it doesn't hurt.
+    ```
 
 8. If everything worked without errors, then you're all set:
 
-``` shell
-exit
-sudo reboot
-```
+    ``` shell
+    exit
+    sudo reboot
+    ```
 
-10. At this point, you should be able to boot normally.
+9. At this point, you should be able to boot normally.
 
-If you cannot boot normally, and didn't do step 7 because there were no error messages, try again with step 7.
+    If you cannot boot normally, and didn't do step 7 because there were no error messages, try again with step 7.
 
 > Sometimes giving GRUB2 the correct configuration for your partitions is not enough, and you must actually install it (or reinstall it) to the Master Boot Record, which step 7 does. Experience helping users in chat has shown that step 7 is sometimes necessary even when no error messages are shown.
