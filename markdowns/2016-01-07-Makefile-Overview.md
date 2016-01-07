@@ -521,8 +521,9 @@ clean :
 .PHONY: edit clean
 ```
 
-##Reference
+## Reference
 
+- [Makefile Gist](https://gist.github.com/Wenchy/f0684d412ae4b9b10988)
 - [跟我一起写Makefile](http://htwm.readthedocs.org/zh_CN/latest/index.html)
 - [GNU Make Manual](https://www.gnu.org/software/make/manual/make.html)。
 
