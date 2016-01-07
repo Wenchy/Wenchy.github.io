@@ -500,7 +500,7 @@ cleandiff :
 
 上面代码可以调用不同目标，删除不同后缀名的文件，也可以调用一个目标（cleanall），删除所有指定类型的文件。
 
-### 编译C语言项目
+### 4.2 编译C语言项目
 
 ```Makefile
 edit : main.o kbd.o command.o display.o 
