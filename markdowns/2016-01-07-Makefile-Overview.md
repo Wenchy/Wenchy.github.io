@@ -320,6 +320,7 @@ output:
 Make命令还提供一些自动变量，它们的值与当前规则有关。主要有以下几个:
 
 - **$@**
+
     $@指代当前目标，就是Make命令当前构建的那个目标。比如，make foo的 $@ 就指代foo。
 
     ```Makefile
@@ -337,6 +338,7 @@ Make命令还提供一些自动变量，它们的值与当前规则有关。主�
     ```
 
 - **$<**    
+
     $< 指代第一个前置条件。比如，规则为 t: p1 p2，那么$< 就指代p1。
 
     ```Makefile
@@ -352,14 +354,19 @@ Make命令还提供一些自动变量，它们的值与当前规则有关。主�
     ```
 
 - **$?** 
+
     $? 指代比目标更新的所有前置条件，之间以空格分隔。比如，规则为 t: p1 p2，其中 p2 的时间戳比 t 新，$?就指代p2。
 - **$^** 
+
     $^ 指代所有前置条件，之间以空格分隔。比如，规则为 t: p1 p2，那么 $^ 就指代 p1 p2 
 - **$\***
+
     $\* 指代匹配符 % 匹配的部分， 比如% 匹配 f1.txt 中的f1 ，$\* 就表示 f1。
 - **$(@D) 和 $(@F)**
+
     $(@D) 和 $(@F) 分别指向 $@ 的目录名和文件名。比如，$@是 src/input.c，那么$(@D) 的值为 src ，$(@F) 的值为 input.c。
 - **$(<D) 和 $(<F)**
+
     $(<D) 和 $(<F) 分别指向 $< 的目录名和文件名。
     所有的自动变量清单，请看手册。下面是自动变量的一个例子。
 
@@ -421,6 +428,7 @@ ${function arguments}
 Makefile提供了许多[内置函数](http://www.gnu.org/software/make/manual/html_node/Functions.html)，可供调用。下面是几个常用的内置函数。
 
 1. shell 函数
+
     shell 函数用来执行 shell 命令。
 
     ```Makefile
@@ -428,6 +436,7 @@ Makefile提供了许多[内置函数](http://www.gnu.org/software/make/manual/ht
     ```
 
 2. wildcard 函数
+
     wildcard 函数用来在 Makefile 中，替换 Bash 的通配符。
 
     ```Makefile
@@ -435,6 +444,7 @@ Makefile提供了许多[内置函数](http://www.gnu.org/software/make/manual/ht
     ```
 
 3. subst 函数
+
     subst 函数用来文本替换，格式如下:
 
     ```Makefile
@@ -459,8 +469,8 @@ Makefile提供了许多[内置函数](http://www.gnu.org/software/make/manual/ht
     # bar is now `a,b,c'.
     ```
 
-
 4. patsubst函数
+
     patsubst 函数用于模式匹配的替换，格式如下;
 
     ```Makefile
@@ -473,6 +483,7 @@ Makefile提供了许多[内置函数](http://www.gnu.org/software/make/manual/ht
     ```
 
 5. 替换后缀名
+
     替换后缀名函数的写法是：变量名 + 冒号 + 后缀名替换规则。它实际上patsubst函数的一种简写形式。
 
     ```Makefile
